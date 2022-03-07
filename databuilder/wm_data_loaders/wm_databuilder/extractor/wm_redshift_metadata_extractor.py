@@ -7,10 +7,10 @@ from typing import (  # noqa: F401
 
 from pyhocon import ConfigFactory, ConfigTree  # noqa: F401
 
-from databuilder.extractor.base_postgres_metadata_extractor import BasePostgresMetadataExtractor
+from .wm_base_postgres_metadata_extractor import BasePostgresMetadataExtractor
 
 
-class WMRedshiftMetadataExtractor(BasePostgresMetadataExtractor):
+class RedshiftMetadataExtractor(BasePostgresMetadataExtractor):
     """
     Extracts Redshift table and column metadata from underlying meta store database using SQLAlchemyExtractor
 

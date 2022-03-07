@@ -26,6 +26,8 @@ build/
 .coverage
 .mypy_cache
 .pytest_cache
+*.env
+
 
 # macOS
 .DS_Store
@@ -53,3 +55,8 @@ coverage
 # Helm
 amundsen-kube-helm/templates/helm/charts/*
 amundsen-kube-helm/templates/helm/requirements.lock
+
+# dotenv
+.env
+env/
+*.pem

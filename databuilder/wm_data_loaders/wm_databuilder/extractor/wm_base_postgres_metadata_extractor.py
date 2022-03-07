@@ -50,7 +50,7 @@ class BasePostgresMetadataExtractor(Extractor):
         conf = conf.with_fallback(BasePostgresMetadataExtractor.DEFAULT_CONFIG)
         self._cluster = conf.get_string(BasePostgresMetadataExtractor.CLUSTER_KEY)
 
-        self._database = conf.get_string(BasePostgresMetadataExtractor.DATABASE_KEY, default='postgress')
+        self._database = conf.get_string(BasePostgresMetadataExtractor.DATABASE_KEY, default='redshift')
 
         self.sql_stmt = self.get_sql_statement(
             use_catalog_as_cluster_name=conf.get_bool(BasePostgresMetadataExtractor.USE_CATALOG_AS_CLUSTER_NAME),
